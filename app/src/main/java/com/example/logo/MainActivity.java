@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //This method is used so that your splash activity
         //can cover the entire screen.
+        //todo hjhjjh
 
         setContentView(R.layout.activity_main);
         //this will bind your MainActivity.class file with activity_main.
