@@ -1,10 +1,13 @@
 package com.example.logo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -34,10 +37,11 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         sqliteHelper = new SqliteHelper(this);
         initCreateAccountTextView();
         initViews();
-
+        closeKeyboard(this);
         //set click event of login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +76,21 @@ public class Login extends AppCompatActivity {
         });
 
 
+    }
+
+    public static void closeKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+
+        // To get the correct window token, lets first get the currently focused view
+        View view = activity.getCurrentFocus();
+
+        // To get the window token when there is no currently focused view, we have a to create a view
+        if (view == null) {
+            view = new View(activity);
+        }
+
+        // hide the keyboard
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     //this method used to set Create account TextView text and click event( maltipal colors

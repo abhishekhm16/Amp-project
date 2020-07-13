@@ -3,6 +3,7 @@ package com.example.logo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -36,6 +37,8 @@ public class Register extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
         sqliteHelper = new SqliteHelper(this);
         initTextViewLogin();
         initViews();
@@ -102,6 +105,7 @@ public class Register extends AppCompatActivity {
         String UserName = editTextUserName.getText().toString();
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
+
 
         //Handling validation for UserName field
         if (UserName.isEmpty()) {

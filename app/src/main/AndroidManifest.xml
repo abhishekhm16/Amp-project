@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".bottom"></activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".bt" />
         <activity android:name=".battery" />
         <activity android:name=".techmode" />
         <activity android:name=".vehicle" />
@@ -26,7 +26,7 @@
             android:name=".Register"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".bt"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
