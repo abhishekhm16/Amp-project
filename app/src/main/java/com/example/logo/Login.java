@@ -109,7 +109,7 @@ public class Login extends AppCompatActivity {
         }
         return result;
     }
-// todo qgekgejhbejgjnnhnn sorry
+// todo qgekgejhbejgjnnhnn sorrydd
     //This method is used to validate input given by user
     public boolean validate() {
         boolean valid = false;
