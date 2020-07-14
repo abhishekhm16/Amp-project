@@ -27,7 +27,7 @@ public class Register extends AppCompatActivity {
     TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutPassword;
 
-    //Declaration Button
+    //Declaration Buttonff
     Button buttonRegister;
 
     //Declaration SqliteHelper

@@ -1,0 +1,16 @@
+Index: app/src/main/java/com/example/logo/Register.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/logo/Register.java	(revision 4bc5356df554b6a8dbcdef77cd00e546383e8b84)
++++ app/src/main/java/com/example/logo/Register.java	(date 1594736186722)
+@@ -27,7 +27,7 @@
+     TextInputLayout textInputLayoutEmail;
+     TextInputLayout textInputLayoutPassword;
+ 
+-    //Declaration Button
++    //Declaration Buttonff
+     Button buttonRegister;
+ 
+     //Declaration SqliteHelper
